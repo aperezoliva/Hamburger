@@ -28,14 +28,19 @@ public class HamburgerTestLogic2 {
 
 	@Test
 	public void testOrderString() {
-		String orderList = "Hamburger price: $1.30, Number of burgers: 5";
+		String orderList = "Hamburger price: $1.3, Number of burgers: 5";
 		assertEquals(orderList, orderOne.printOrder());
 	}
 	
 	@Test
-	
 	public void testFilledOrderNotNull() {
 		assertNotNull(orderOne);
 	}
-
+	
+	@Test
+	public void orderLength() {
+		String orderList = "Hamburger price: $1.3, Number of burgers: 5";
+		int orderLength = orderList.length();
+		assertTrue(orderLength == orderOne.printOrder().length());
+	}
 }

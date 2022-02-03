@@ -29,12 +29,13 @@ public class HamburgerTestLogic1 {
 	@Test
 	public void testPrice() {
 		double hamburgerPrice = 1 *  2.30;
-		assertEquals(hamburgerPrice, orderOne);
+		assertEquals(hamburgerPrice, orderOne.caculateCost(), 0.001);
 	}
 	
 	@Test
 	public void testNotNullEmptyOrder() {
 		assertNotNull(emptyOrder);
 	}
+	
 
 }
